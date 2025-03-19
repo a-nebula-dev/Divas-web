@@ -1,0 +1,115 @@
+/*~---------------------------------------------------------------------------*/
+/*                               *       +                                    */
+/*                         '                  |                               */
+/*                     ()    .-.,="``"=.    - o -                             */
+/*                           '=/_       \     |                               */
+/*                        *   |  '=._    |                                    */
+/*                             \     `=./`,        '                          */
+/*                          .   '=.__.=' `='      *                           */
+/*                 +                         +                                */
+/*                      O      *        '       .                             */
+/*                                                                            */
+/*  File      : UserInfo.module.css                                           */
+/*  Project   : divas-client                                                  */
+/*  Date      : 2024-04-01                                                    */
+/*  License   : See project's COPYING.TXT for full info.                      */
+/*  Author    : mateus.digital <hello@mateus.digital>                         */
+/*  Copyright : mateus.digital - 2024                                         */
+/*                                                                            */
+/*  Description :                                                             */
+/*                                                                            */
+/*---------------------------------------------------------------------------~*/
+
+
+/* -------------------------------------------------------------------------- */
+.contentContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* background-color: blueviolet; */
+  gap: 2rem;
+}
+
+/* -------------------------------------------------------------------------- */
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+  justify-content: center;
+
+  /* padding: 1rem; */
+}
+
+/* -------------------------------------------------------------------------- */
+.profilePhoto {
+  margin: 1rem;
+  max-width: 10rem;
+}
+
+/*
+  User Names
+*/
+
+
+/* -------------------------------------------------------------------------- */
+.namesContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10rem;
+}
+
+.namesContainerLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  /* background-color: blueviolet; */
+}
+
+.namesContainerRight {
+  display: flex;
+  align-items: center;
+  /* background-color: cyan; */
+}
+
+.fullname {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.username {
+  opacity: 0.8;
+}
+
+
+
+/*
+  Stats
+*/
+
+/* -------------------------------------------------------------------------- */
+.statsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.statContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statValue {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.statText {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}

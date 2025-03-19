@@ -1,0 +1,61 @@
+/*~---------------------------------------------------------------------------*/
+/*                               *       +                                    */
+/*                         '                  |                               */
+/*                     ()    .-.,="``"=.    - o -                             */
+/*                           '=/_       \     |                               */
+/*                        *   |  '=._    |                                    */
+/*                             \     `=./`,        '                          */
+/*                          .   '=.__.=' `='      *                           */
+/*                 +                         +                                */
+/*                      O      *        '       .                             */
+/*                                                                            */
+/*  File      : CategoriesBar.module.css                                      */
+/*  Project   : divas-client                                                  */
+/*  Date      : 2024-04-01                                                    */
+/*  License   : See project's COPYING.TXT for full info.                      */
+/*  Author    : mateus.digital <hello@mateus.digital>                         */
+/*  Copyright : mateus.digital - 2024                                         */
+/*                                                                            */
+/*  Description :                                                             */
+/*                                                                            */
+/*---------------------------------------------------------------------------~*/
+
+
+/* -------------------------------------------------------------------------- */
+.contentContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 100%;
+  border: var(--layout-border-color) var(--layout-border-size) var(--layout-border-style);
+  margin: 1rem 0rem;
+
+  /* background-color: red; */
+}
+
+/* -------------------------------------------------------------------------- */
+.title {
+  display: block;
+  padding: 0.2rem 1rem;
+  margin: 0.5rem;
+
+  font-size: 1.2rem;
+
+  cursor: pointer;
+}
+
+.title:hover {
+  color: #a6cebb;
+}
+
+.selected {
+  color: #fa7b90 !important;
+  font-weight: normal;
+  /* background-color: blue; */
+}
+
+.unselected {
+  font-weight: lighter;
+}
