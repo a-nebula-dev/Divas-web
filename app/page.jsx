@@ -1,3 +1,7 @@
+import Lander from '../components/landing/lander'
 export default function Home() {
-  return <section></section>;
+  return <section>
+    
+    <Lander/>
+  </section>;
 }
