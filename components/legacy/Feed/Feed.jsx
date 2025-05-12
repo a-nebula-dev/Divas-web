@@ -1,10 +1,9 @@
 'use client'
 // -----------------------------------------------------------------------------
 import React, { useState, useEffect } from 'react';
-import InfiniteScroll from 'react-infinite-scroll-component';
+/* import InfiniteScroll from './react-infinite-scroll-component'; */
 // -----------------------------------------------------------------------------
-import ToastUtils from '@/utils/Toast';
-import FeedService from "@/services/FeedService";
+/* import FeedService from "./services/FeedService"; */
 // -----------------------------------------------------------------------------
 import FeedItem from "./FeedItem"
 // -----------------------------------------------------------------------------

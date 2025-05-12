@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------
 import React from "react";
 // -----------------------------------------------------------------------------
-import NET from "@/app/NET";
+/* import NET from "@/app/NET"; */
 import _Link from "@/components/legacy/Link";
 // -----------------------------------------------------------------------------
 import { PageUrls } from "@/utils/PageUtils";

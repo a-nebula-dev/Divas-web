@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
-import { Menu } from "lucide-react"
+import * as React from "react";
+import Link from "next/link";
+import { Menu } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Button } from "./button";
+import { Sheet, SheetContent, SheetTrigger } from "./sheet";
 
-export default function Navbar() {
-  const [isOpen, setIsOpen] = React.useState(false)
+function Navbar() {
+  const [isOpen, setIsOpen] = React.useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-divas-secondary/20 bg-divas-background">
@@ -19,10 +19,16 @@ export default function Navbar() {
           </Link>
         </div>
         <nav className="hidden md:flex md:items-center md:gap-6">
-          <Link href="/" className="text-sm font-medium text-divas-text transition-colors hover:text-divas-accent">
+          <Link
+            href="/"
+            className="text-sm font-medium text-divas-text transition-colors hover:text-divas-accent"
+          >
             Home
           </Link>
-          <Link href="/about" className="text-sm font-medium text-divas-text transition-colors hover:text-divas-accent">
+          <Link
+            href="/about"
+            className="text-sm font-medium text-divas-text transition-colors hover:text-divas-accent"
+          >
             About
           </Link>
           <Link
@@ -37,7 +43,10 @@ export default function Navbar() {
           >
             Contact
           </Link>
-          <Button variant="default" className="bg-divas-primary text-divas-background hover:bg-divas-accent">
+          <Button
+            variant="default"
+            className="bg-divas-primary text-divas-background hover:bg-divas-accent"
+          >
             Get Started
           </Button>
         </nav>
@@ -90,5 +99,6 @@ export default function Navbar() {
         </Sheet>
       </div>
     </header>
-  )
+  );
 }
+export default Navbar;

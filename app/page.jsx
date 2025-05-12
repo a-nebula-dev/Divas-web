@@ -1,7 +1,8 @@
-import Lander from '../components/landing/lander'
+import Login from '../pages/Login';
+import Lander from '../components/landing/Lander'
 export default function Home() {
   return <section>
     
-    <Lander/>
+    <Login/>
   </section>;
 }
