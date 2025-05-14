@@ -7,8 +7,12 @@
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-divasText: oklch(0.2077 0.0602 14.82) ;
+  --color-divasAccent: oklch(0.708 0.229 320) ;
+  --color-divasBackground: oklch(0.97 0.0153 7.48);
 }
 @tailwind utilities;
+
 
 @layer base {
   :root {

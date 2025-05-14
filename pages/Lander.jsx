@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import Navbar from "../ui/navbar";
+import Navbar from "../components/landing/navbar";
 
 const lander = () => {
   return (
