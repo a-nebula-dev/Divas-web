@@ -1,9 +1,0 @@
-/* -------------------------------------------------------------------------- */
-.link {
-  color: black;
-  text-decoration: underline dotted;
-}
-
-.link:hover {
-  text-decoration: underline solid;
-}
