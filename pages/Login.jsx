@@ -1,5 +1,5 @@
 'use client'
-import Logo from '../images/divasLogo.png'
+import Logo from '../public/images/logoTeste.png'
 import React from 'react'
 import { useState } from "react"
 import { Button } from "../components/ui/button"
@@ -19,7 +19,7 @@ const Login = () => {
         <div className="mx-auto flex w-full max-w-md flex-col items-center">
           {/* Logo */}
           <div className="mb-12 mt-8">
-            <img src={Logo}/>
+            <img src={Logo} alt='logo divas'/>
           </div>
 
           {/* formluario */}
@@ -31,7 +31,7 @@ const Login = () => {
               <Input
                 id="login"
                 onChange={(e) => setUsername(e.target.value)}
-                className="rounded-xl border-black"
+                className="rounded-xl border-black p-3"
               />
             </div>
 
