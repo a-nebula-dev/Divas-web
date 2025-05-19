@@ -1,8 +1,24 @@
-import Image from "next/image"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs"
-import { cn } from "../lib/utils"
+"use client";
+import Image from "next/image";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "../../components/ui/tabs";
+import { cn } from "../../lib/utils";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+import { isAuthenticated } from "../../lib/auth";
 
 export default function Perfil() {
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!isAuthenticated()) {
+      router.push("/login");
+    }
+  }, []);
   return (
     <div className="flex min-h-screen bg-white">
       {/* Main content */}
@@ -26,7 +42,9 @@ export default function Perfil() {
               {/* Profile info */}
               <div className="flex-1 text-center md:text-left">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                  <h1 className="text-2xl font-semibold mb-2 md:mb-0">Alessandro Silva</h1>
+                  <h1 className="text-2xl font-semibold mb-2 md:mb-0">
+                    Alessandro Silva
+                  </h1>
                   <div className="flex items-center justify-center md:justify-end gap-2">
                     <button className="p-2 rounded-full bg-gray-100 hover:bg-gray-200">
                       <svg
@@ -88,10 +106,12 @@ export default function Perfil() {
 
                 {/* Bio */}
                 <p className="text-sm text-gray-700 max-w-2xl">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac turpis porta, elementum velit
-                  vitae, blandit dolor. Nunc blandit aliquet erat nec auctor. Nam lobortis purus sed neque accumsan
-                  ultamcorper. Vivamus dolor felis, viverra a porta id, blandit eget magna. Cras ornare, ipsum id
-                  blandit porttitor.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aenean ac turpis porta, elementum velit vitae, blandit dolor.
+                  Nunc blandit aliquet erat nec auctor. Nam lobortis purus sed
+                  neque accumsan ultamcorper. Vivamus dolor felis, viverra a
+                  porta id, blandit eget magna. Cras ornare, ipsum id blandit
+                  porttitor.
                 </p>
               </div>
             </div>
@@ -106,7 +126,7 @@ export default function Perfil() {
                 value="likes"
                 className={cn(
                   "data-[state=active]:bg-transparent data-[state=active]:shadow-none rounded-none h-12 px-6",
-                  "data-[state=active]:border-b-2 data-[state=active]:border-pink-500 data-[state=active]:text-pink-500",
+                  "data-[state=active]:border-b-2 data-[state=active]:border-pink-500 data-[state=active]:text-pink-500"
                 )}
               >
                 Likes
@@ -115,7 +135,7 @@ export default function Perfil() {
                 value="looks"
                 className={cn(
                   "data-[state=active]:bg-transparent data-[state=active]:shadow-none rounded-none h-12 px-6",
-                  "data-[state=active]:border-b-2 data-[state=active]:border-pink-500 data-[state=active]:text-pink-500",
+                  "data-[state=active]:border-b-2 data-[state=active]:border-pink-500 data-[state=active]:text-pink-500"
                 )}
               >
                 Looks
@@ -124,7 +144,7 @@ export default function Perfil() {
                 value="collections"
                 className={cn(
                   "data-[state=active]:bg-transparent data-[state=active]:shadow-none rounded-none h-12 px-6",
-                  "data-[state=active]:border-b-2 data-[state=active]:border-pink-500 data-[state=active]:text-pink-500",
+                  "data-[state=active]:border-b-2 data-[state=active]:border-pink-500 data-[state=active]:text-pink-500"
                 )}
               >
                 Collections
@@ -133,7 +153,7 @@ export default function Perfil() {
                 value="groups"
                 className={cn(
                   "data-[state=active]:bg-transparent data-[state=active]:shadow-none rounded-none h-12 px-6",
-                  "data-[state=active]:border-b-2 data-[state=active]:border-pink-500 data-[state=active]:text-pink-500",
+                  "data-[state=active]:border-b-2 data-[state=active]:border-pink-500 data-[state=active]:text-pink-500"
                 )}
               >
                 Groups
@@ -147,7 +167,7 @@ export default function Perfil() {
                     value="published"
                     className={cn(
                       "data-[state=active]:bg-transparent data-[state=active]:shadow-none rounded-none",
-                      "data-[state=active]:text-pink-500 data-[state=active]:underline data-[state=active]:underline-offset-8",
+                      "data-[state=active]:text-pink-500 data-[state=active]:underline data-[state=active]:underline-offset-8"
                     )}
                   >
                     Published
@@ -156,7 +176,7 @@ export default function Perfil() {
                     value="drafts"
                     className={cn(
                       "data-[state=active]:bg-transparent data-[state=active]:shadow-none rounded-none",
-                      "data-[state=active]:text-pink-500 data-[state=active]:underline data-[state=active]:underline-offset-8",
+                      "data-[state=active]:text-pink-500 data-[state=active]:underline data-[state=active]:underline-offset-8"
                     )}
                   >
                     Drafts
@@ -201,7 +221,7 @@ export default function Perfil() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function ContentCard() {
@@ -233,8 +253,10 @@ function ContentCard() {
             <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
           </svg>
         </button>
-        <div className="bg-white/80 backdrop-blur-sm p-1.5 rounded-md text-xs">2</div>
+        <div className="bg-white/80 backdrop-blur-sm p-1.5 rounded-md text-xs">
+          2
+        </div>
       </div>
     </div>
-  )
+  );
 }

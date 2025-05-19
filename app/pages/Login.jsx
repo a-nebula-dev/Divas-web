@@ -1,13 +1,20 @@
-'use client'
-import Logo from '../public/images/logoTeste.png'
-import React from 'react'
-import { useState } from "react"
-import { Button } from "../components/ui/button"
-import { Input } from "../components/ui/input"
-import { Separator } from "../components/ui/separator"
+"use client";
+
+import React from "react";
+import { useState } from "react";
+import { Button } from "../../components/ui/button";
+import { Input } from "../../components/ui/input";
+import { Separator } from "../../components/ui/separator";
+import { login } from "../../lib/auth";
+import { useRouter } from "next/router";
 
 const Login = () => {
-    return (
+  const handleLogin = () => {
+    login(); // salva no localStorage
+    router.push("Perfil.jsx"); // redireciona pra página protegida
+  };
+
+  return (
     <div className="flex min-h-screen flex-col md:flex-row">
       {/* esquerda gradiente*/}
       <div className="bg-gradient-to-br from-pink-300 to-purple-400 md:w-1/2">
@@ -19,7 +26,7 @@ const Login = () => {
         <div className="mx-auto flex w-full max-w-md flex-col items-center">
           {/* Logo */}
           <div className="mb-12 mt-8">
-            <img src={Logo} alt='logo divas'/>
+            <img src={"divasLogo.png"} alt="logo divas" />
           </div>
 
           {/* formluario */}
@@ -53,14 +60,21 @@ const Login = () => {
               </Button>
             </div>
 
-            <Button type="submit" className="mx-auto w-50 bg-emerald-200 text-black hover:bg-emerald-800 hover:text-white hover:cursor-pointer transition-all duration-300">
+            <Button
+              type="submit"
+              onClick={handleLogin}
+              className="mx-auto w-50 bg-emerald-200 text-black hover:bg-emerald-800 hover:text-white hover:cursor-pointer transition-all duration-300"
+            >
               Entrar
             </Button>
           </form>
 
           <div className="my-6 w-full">
             <Separator className="my-4" />
-            <Button variant="outline" className="flex w-full items-center justify-center gap-2 border-gray-200">
+            <Button
+              variant="outline"
+              className="flex w-full items-center justify-center gap-2 border-gray-200"
+            >
               Entrar com Google
             </Button>
             <Separator className="my-4" />
@@ -101,8 +115,7 @@ const Login = () => {
         </div>
       </div>
     </div>
-  )
-}
-
+  );
+};
 
 export default Login;

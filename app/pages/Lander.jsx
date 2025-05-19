@@ -1,11 +1,11 @@
-'use client'
+"use client";
 import React from "react";
-import Navbar from "../components/landing/navbar";
+import Navbar from "../../components/landing/navbar";
 
 const lander = () => {
   return (
     <section>
-      <Navbar/>
+      <Navbar />
       <div>lander</div>
     </section>
   );
